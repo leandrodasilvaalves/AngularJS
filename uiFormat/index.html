@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="uiFormat.js"></script>
+    <script>
+        angular.module('myapp',['uiFormat']);
+        angular.module('myapp').controller('myCtrl',function($scope){
+            $scope.cpf="";
+            $scope.alerta=function(){
+                alert('O formulário está ok!');
+            };
+        });
+    </script>
+
+    <style type="text/css" rel="stylesheet">
+        .has-error{
+            border:1px solid #a94442;
+        }
+        .error-message{
+            color:#a94442;
+            font-size:1em;
+        }
+
+    </style>
+    
+</head>
+<body ng-app="myapp" ng-controller="myCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-8 col-sm-10  jumbotron">
+                <form name="myForm">
+                     <h3>Directives Ui Format <smal>$Validation</smal></h2>
+                     
+                    <div class="form-group">
+                        <input class="form-control" type="text" 
+                           name="cpf" placeholder="CPF 000.000.000-00"
+                           ng-class="{'has-error': myForm.cpf.$invalid && myForm.cpf.$dirty}"
+                           ng-model="cpf" 
+                           ng-pattern="/[\d{3}\.]{2}\d{3}-\d{2}/"
+                           required ui-cpf>
+                        <div class="error-message" ng-show="myForm.cpf.$invalid && myForm.cpf.$dirty">
+                            <div ng-show="myForm.cpf.$error.required">Informe o CPF.</div>
+                            <div ng-show="myForm.cpf.$error.pattern">Formato incorreto.</div>
+                            <div ng-show="myForm.cpf.$error.cpfInvalido">O CPF informado não é válido.</div>
+                        </div>
+                     </div>                    
+
+                    <div class="form-group">
+                         <input class="form-control" type="text"
+                            name="cnpj" placeholder="CNPJ 00.000.000/0000-00"
+                            ng-class="{'has-error': myForm.cnpj.$invalid && myForm.cnpj.$dirty}"
+                            ng-model="cnpj"
+                            ng-pattern="/\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}/"
+                            required ui-cnpj>
+
+                        <div class="error-message" ng-show="myForm.cnpj.$invalid && myForm.cnpj.$dirty">
+                            <div ng-show="myForm.cnpj.$error.required">Informe o CNPJ.</div>
+                            <div ng-show="myForm.cnpj.$error.pattern">Formato incorreto.</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                         <input class="form-control" type="text"
+                            name="cep" placeholder="CEP 00.000-000"
+                            ng-class="{'has-error': myForm.cep.$invalid && myForm.cep.$dirty}"
+                            ng-model="cep"
+                            ng-pattern="/\d{2}\.\d{3}\-\d{3}/"
+                            required ui-cep>
+                        <div class="error-message" ng-show="myForm.cep.$invalid && myForm.cep.$dirty">
+                            <div ng-show="myForm.cep.$error.required">Informe o CEP.</div>
+                            <div ng-show="myForm.cep.$error.pattern">Formato incorreto.</div>
+                        </div>
+                    </div>
+                   
+                    
+                    <div class="form-group">
+                        <input class="form-control" type="text"
+                            name="data" placeholder="Data dd/MM/yyyy"
+                            ng-class="{'has-error': myForm.data.$invalid && myForm.data.$dirty}"
+                            ng-model="data"
+                            ng-pattern="/[\d{2}\/]{2}\/\d{4}/"
+                            required ui-date>
+                        <div class="error-message" ng-show="myForm.data.$invalid && myForm.data.$dirty">
+                            <div ng-show="myForm.data.$error.required">Informe a data.</div>
+                            <div ng-show="myForm.data.$error.pattern">Formato incorreto.</div>
+                            <div ng-show="myForm.data.$error.dataInvalida">A data informada é inválida.</div>
+                        </div>
+                    </div>
+                    
+                   <div class="form-group">
+                        <input class="form-control" type="text"
+                            name="moeda" placeholder="Valor R$ 0,00"
+                            ng-class="{'has-error': myForm.moeda.$invalid && myForm.moeda.$dirty}"
+                            ng-model="moeda"
+                            required ui-moeda>
+                        <div class="error-message" ng-show="myForm.moeda.$invalid && myForm.moeda.$dirty">
+                            <div>Informe o valor.</div>
+                        </div>
+                   </div>
+                    
+                    <div class="form-group">
+                        <input class="form-control" type="text"
+                            name="celular" placeholder="Celular (00) 0 0000-0000"
+                            ng-class="{'has-error': myForm.celular.$invalid && myForm.celular.$dirty}"
+                            ng-model="celular"
+                            ng-pattern="/\(\d{2}\)\s\d\s\d{4}-\d{4}/"
+                            required ui-celular>
+                        <div class="error-message" ng-show="myForm.celular.$invalid && myForm.celular.$dirty">
+                            <div ng-show="myForm.celular.$error.required">Informe o celular.</div>
+                            <div ng-show="myForm.celular.$error.pattern">Formato inválido.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input class="form-control" type="text"
+                            name="fixo" placeholder="Telefone fixo (00) 0000-0000"
+                            ng-class="{'has-error': myForm.fixo.$invalid && myForm.fixo.$dirty}"
+                            ng-model="fixo"
+                            ng-pattern="/\(\d{2}\)\s\d{4}-\d{4}/"
+                            required ui-telfixo>
+                        <div class="error-message" ng-show="myForm.fixo.$invalid && myForm.fixo.$dirty">
+                            <div ng-show="myForm.fixo.$error.required">Informe o telefone fixo.</div>
+                            <div ng-show="myForm.fixo.$error.pattern">Formato inválido.</div>
+                        </div>
+
+                    </div>
+                 
+                    <div class="row">
+                        <div class="col-12 text-right" style="padding-right: 15px;">
+                            <button class="btn btn-primary" 
+                                ng-disabled="myForm.$invalid" 
+                                ng-click="alerta();">Validar</button>
+                        </div>
+                    </div>
+                </form>
+               
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
