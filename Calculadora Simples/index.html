@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="calculadoraApp.js"></script>
+    <script src="calculadora.factory.js"></script>
+    <script src="calculadora.controller.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>calculadora Angular JS</title>
+	
+
+  </head>
+  <body ng-app="appCalculadora" ng-controller="calculadoraController">
+    <div class="jumbotron">
+	<h1>{{ titulo}}</h1>
+    
+	<hr/>
+   
+	<div class="row text-center">
+		<div class="col-md-8">
+			<div class="form-group">
+				<input type="number" placeholder="Primeiro numero"
+					class="form-control" ng-model="primeiroNumero"/>
+			</div>
+			<div class="form-group">
+				<input type="number" placeholder="segundo numero"
+					class="form-control" ng-model="segundoNumero"/>
+			</div>
+			<div class="form-group">			
+				<button class="btn btn-primary" ng-click="somar(primeiroNumero, segundoNumero)">Somar + </button>
+				<button class="btn btn-success" ng-click="diminuir(primeiroNumero, segundoNumero)">Diminuir -</button>
+				<button class="btn btn-warning" ng-click="multiplicar(primeiroNumero, segundoNumero)">Multiplicar X</button>
+				<button class="btn btn-danger" ng-click="dividir(primeiroNumero, segundoNumero)">Dividir :</button>
+				<button class="btn btn-dark" ng-click="calcPorcentagem(primeiroNumero, segundoNumero)">Porcentagem %</button>
+			</div>
+			
+			<div class="form-group">
+				<h3>Total: <span ng-bind="total"></span></h3>
+			</div>
+			
+		</div>
+
+	</div>
+   </div>
+
+
+  </body>
+</html>
