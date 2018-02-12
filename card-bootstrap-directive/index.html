@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ titulo }}</title>
+    <title ng-bind="titudoDoc"></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
         crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
@@ -26,24 +26,24 @@
     <div class="container">
         <div class="jumbotron">
             <h1>Angular JS </h1>
-            <h2>{{ titulo }}</h2>
+            <h2 ng-bind="titudoDoc"></h2>
         </div>
         <div class="row">
-            <div class="card" style="width: 20rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-block">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div col="sm-4">
+                <ng-card titulo="Este é o card 01">
+                    Esta é a descrição do card 01. É muito bancana criar diretivas
+                </ng-card>
+            </div>
+            <div col="sm-4">
+                <div ng-card titulo="Este é o titulo do card 02">
+                    Esta é a descrição do cardo 02. Criar diretivas é legal
                 </div>
             </div>
-        </div>
-
-        <div class="row">
-            <ng-card></ng-card>
-        </div>
-        <div class="row">
-            <div ng-card></div>
+            <div col="sm-4">
+                <ng-card titulo="{{ tituloCard }}">
+                    {{ descricaoCard }}
+                </ng-card>
+            </div>
         </div>
     </div>
 
