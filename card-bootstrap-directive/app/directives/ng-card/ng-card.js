@@ -1,6 +1,6 @@
 app.directive('ngCard', function () {
     return {
-        templateUrl: 'directive.html',
+        templateUrl: 'app/directives/ng-card/ng-card.html',
         restrict: 'AE',
         replace: true,
         transclude: true,

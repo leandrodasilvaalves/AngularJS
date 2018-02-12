@@ -1,4 +1,4 @@
-app.controller('appCtrl',function($scope, $rootScope){
+app.controller('mainCtrl',function($scope, $rootScope){
 
     $rootScope.titudoDoc ="Trabalhando com diretivas.";
     $scope.tituloCard="Este é o meu card"
