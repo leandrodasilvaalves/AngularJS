@@ -21,6 +21,7 @@
     <!--app-->
     <script src="app/app.js"></script>
     <script src="app/controllers/main.controller.js"></script>
+    <script src="app/filters/ellipsis.js" class=""></script>
     <script src="app/directives/ng-card/ng-card.js"></script>
     <link rel="stylesheet" href="app/directives/ng-card/ng-card.css">
 
@@ -34,17 +35,17 @@
         </div>
         <div class="row">
             <div col="sm-4">
-                <ng-card titulo="Balões" imagem="images\balao.jpg" url="https://pt.wikipedia.org/wiki/Bal%C3%A3o">
+                <ng-card titulo="Balões" imagem="images\balao.jpg" url="https://pt.wikipedia.org/wiki/Bal%C3%A3o" ellipsis="150">
                     Balão é um tipo de aeróstato que permanece no ar, devido à sua flutuabilidade. Um balão viaja impulsionado pelo vento consoante a sua direção e intensidade. 
                 </ng-card>
             </div>
             <div col="sm-4">
-                <div ng-card imagem="images\gato.jpg" titulo="Gatos" url="https://pt.wikipedia.org/wiki/Gato">
-                    O gato (Felis silvestris catus), também conhecido como gato caseiro, gato urbano ou gato doméstico,[4] é um mamífero carnívoro da família dos felídeos, muito popular como animal de estimação.
+                <div ng-card imagem="images\gato.jpg" titulo="Gatos" url="https://pt.wikipedia.org/wiki/Gato" ellipsis="150">
+                    O gato (Felis silvestris catus), também conhecido como gato caseiro, gato urbano ou gato doméstico, é um mamífero carnívoro da família dos felídeos, muito popular como animal de estimação.
                 </div>
             </div>
             <div col="sm-4">
-                <ng-card titulo="{{ tituloCard }}" imagem="{{ imagem }}" url="{{ url }}">
+                <ng-card titulo="{{ tituloCard }}" imagem="{{ imagem }}" url="{{ url }}" ellipsis="150">
                     {{ descricaoCard }}
                 </ng-card>
             </div>
