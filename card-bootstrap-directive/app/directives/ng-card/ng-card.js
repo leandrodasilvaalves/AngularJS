@@ -5,7 +5,9 @@ app.directive('ngCard', function () {
         replace: true,
         transclude: true,
         scope: {
-            titulo: '@'
+            titulo: '@',
+            imagem: '@',
+            url: '@'
         }
     }
 });

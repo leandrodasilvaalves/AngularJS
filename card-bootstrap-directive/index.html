@@ -34,17 +34,17 @@
         </div>
         <div class="row">
             <div col="sm-4">
-                <ng-card titulo="Este é o card 01">
-                    Esta é a descrição do card 01. É muito bancana criar diretivas
+                <ng-card titulo="Balões" imagem="images\balao.jpg" url="https://pt.wikipedia.org/wiki/Bal%C3%A3o">
+                    Balão é um tipo de aeróstato que permanece no ar, devido à sua flutuabilidade. Um balão viaja impulsionado pelo vento consoante a sua direção e intensidade. 
                 </ng-card>
             </div>
             <div col="sm-4">
-                <div ng-card titulo="Este é o titulo do card 02">
-                    Esta é a descrição do cardo 02. Criar diretivas é legal
+                <div ng-card imagem="images\gato.jpg" titulo="Gatos" url="https://pt.wikipedia.org/wiki/Gato">
+                    O gato (Felis silvestris catus), também conhecido como gato caseiro, gato urbano ou gato doméstico,[4] é um mamífero carnívoro da família dos felídeos, muito popular como animal de estimação.
                 </div>
             </div>
             <div col="sm-4">
-                <ng-card titulo="{{ tituloCard }}">
+                <ng-card titulo="{{ tituloCard }}" imagem="{{ imagem }}" url="{{ url }}">
                     {{ descricaoCard }}
                 </ng-card>
             </div>
