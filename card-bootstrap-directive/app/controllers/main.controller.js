@@ -7,4 +7,5 @@ app.controller('mainCtrl',function($scope, $rootScope){
     $scope.imagem ="/images/borboleta.jpg";
     $scope.url ="https://pt.wikipedia.org/wiki/Borboleta";
     $scope.btnText ="Quero aprender mais...";
+    $scope.btnClass="btn-info"
 });

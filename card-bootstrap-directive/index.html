@@ -39,8 +39,9 @@
                     titulo = "Balões" 
                     imagem = "images\balao.jpg" 
                     url = "https://pt.wikipedia.org/wiki/Bal%C3%A3o" 
-                    btn-text = "Mais Detalhes..."                 
-                    ellipsis = "150">
+                    btn-text = "Mais Detalhes..."
+                    btn-class="btn-success"                 
+                    ellipsis = "160">
                     Balão é um tipo de aeróstato que permanece no ar, devido à sua flutuabilidade. Um balão viaja impulsionado pelo vento consoante a sua direção e intensidade. 
                 </ng-card>
             </div>
@@ -50,7 +51,8 @@
                      titulo = "Gatos" 
                      url = "https://pt.wikipedia.org/wiki/Gato" 
                      btn-text = "Saber mais..."
-                     ellipsis = "150">
+                     btn-class="btn-danger"
+                     ellipsis = "160">
                     O gato (Felis silvestris catus), também conhecido como gato caseiro, gato urbano ou gato doméstico, é um mamífero carnívoro da família dos felídeos, muito popular como animal de estimação.
                 </div>
             </div>
@@ -59,7 +61,8 @@
                          imagem = "{{ imagem }}" 
                          url = "{{ url }}" 
                          btn-text = "{{ btnText }}"
-                         ellipsis = "150">
+                         btn-class = "{{ btnClass }}"
+                         ellipsis = "160">
                     {{ descricaoCard }}
                 </ng-card>
             </div>

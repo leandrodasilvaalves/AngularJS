@@ -9,6 +9,7 @@ app.directive('ngCard', function ($filter, $timeout) {
             imagem: '@',
             url: '@',
             btnText:'@',
+            btnClass: '@',
             ellipsis: '@'
         },
         link: function (scope, element, attrs, $transclude) {

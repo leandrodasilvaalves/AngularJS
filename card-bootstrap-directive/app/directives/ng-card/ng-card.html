@@ -4,6 +4,6 @@
         <h4 class="card-title" ng-bind="titulo"></h4>
         <p class="card-text" ng-transclude></p>
 
-        <a href="{{ url }}" target="_blank" class="btn" ng-bind="btnText"></a>
+        <a href="{{ url }}" target="_blank" class="btn" ng-class="btnClass ? btnClass : 'btn-secondary'" ng-bind="btnText"></a>
     </div>
 </div>
