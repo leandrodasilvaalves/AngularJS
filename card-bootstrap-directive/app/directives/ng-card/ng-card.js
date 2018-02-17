@@ -8,6 +8,7 @@ app.directive('ngCard', function ($filter, $timeout) {
             titulo: '@',
             imagem: '@',
             url: '@',
+            btnText:'@',
             ellipsis: '@'
         },
         link: function (scope, element, attrs, $transclude) {

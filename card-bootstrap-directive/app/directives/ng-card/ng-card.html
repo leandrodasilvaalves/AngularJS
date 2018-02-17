@@ -3,6 +3,7 @@
     <div class="card-block">
         <h4 class="card-title" ng-bind="titulo"></h4>
         <p class="card-text" ng-transclude></p>
-        <a href="{{ url }}" target="_blank" class="btn btn-primary">Ver mais...</a>
+
+        <a href="{{ url }}" target="_blank" class="btn" ng-bind="btnText"></a>
     </div>
 </div>
