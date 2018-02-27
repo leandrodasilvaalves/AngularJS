@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body  ng-app="appCategoria" ng-controller="categoriaController as vm">
+    <h1>Módulo De Categorias</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Categoria</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="categoria in vm.categorias track by $index">
+                <td ng-bind="$index"></td>
+                <td ng-bind="categoria"></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script src="node_modules/angular/angular.min.js"></script>    
+    <script src="app/app.js"></script>
+    <script src="app/services/categoria.services.js"></script>
+    <script src="app/controllers/categoria.controller.js"></script>
+</body>
+</html>

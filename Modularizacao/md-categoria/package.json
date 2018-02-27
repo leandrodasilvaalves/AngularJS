@@ -1,0 +1,15 @@
+{
+  "name": "md-categoria",
+  "version": "1.0.0",
+  "description": "modulo de categorias",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leandro Alves",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.9",
+    "bootstrap": "^4.0.0"
+  }
+}
