@@ -13,6 +13,17 @@
 <body ng-app="appCategoria" ng-controller="categoriaController as vm">
     <div class="container">
         <h1>Módulo De Categorias</h1>
+        <form name="frmCategoria">
+            <div class="form-group col-sm-3">
+                <label for="exampleInputEmail1">Categoria</label>
+                <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Informe o nome da categoria">
+                <small id="emailHelp" class="form-text text-muted">Dê um nome bem legal para esta categoria.</small>
+                <button class="btn btn-success">
+                    Incluir Categoria <i class="fa fa-plus"></i>
+                </button>
+            </div>
+        </form>
+
         <table class="table table-striped table-responsive table-hover">
             <thead>
                 <tr>
@@ -26,8 +37,12 @@
                     <td ng-bind="$index + 1"></td>
                     <td ng-bind="categoria"></td>
                     <td>
-                        <button type="button" class="btn btn-info btn-sm"><i class="fa fa-edit"></i></button>
-                        <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                        <button type="button" class="btn btn-info btn-sm">
+                            <i class="fa fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger btn-sm">
+                            <i class="fa fa-trash"></i>
+                        </button>
                     </td>
                 </tr>
             </tbody>
