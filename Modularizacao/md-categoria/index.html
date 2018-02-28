@@ -14,12 +14,14 @@
     <div class="container">
         <h1>Módulo De Categorias</h1>
         <form name="frmCategoria">
-            <div class="form-group col-sm-3">
+            <div class="form-group col-sm-6">
                 <label for="exampleInputEmail1">Categoria</label>
-                <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Informe o nome da categoria">
-                <small id="emailHelp" class="form-text text-muted">Dê um nome bem legal para esta categoria.</small>
-                <button class="btn btn-success">
-                    Incluir Categoria <i class="fa fa-plus"></i>
+                <input type="text" class="form-control"
+                    placeholder="Informe o nome da categoria"
+                    ng-model="categoria">
+                <button class="btn btn-success"
+                            ng-click="vm.incluir(categoria)">
+                     <i class="fa fa-plus"></i> Incluir Categoria
                 </button>
             </div>
         </form>
@@ -34,13 +36,14 @@
             </thead>
             <tbody>
                 <tr ng-repeat="categoria in vm.categorias track by $index">
-                    <td ng-bind="$index + 1"></td>
-                    <td ng-bind="categoria"></td>
+                    <td ng-bind="::vm.setIndex($index)"></td>
+                    <td ng-bind="::categoria"></td>
                     <td>
                         <button type="button" class="btn btn-info btn-sm">
                             <i class="fa fa-edit"></i>
                         </button>
-                        <button type="button" class="btn btn-danger btn-sm">
+                        <button type="button" class="btn btn-danger btn-sm"
+                            ng-click="vm.remover(categoria)">
                             <i class="fa fa-trash"></i>
                         </button>
                     </td>
@@ -49,7 +52,7 @@
         </table>
     </div>
 
-
+    <script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="app/app.js"></script>
     <script src="app/services/categoria.services.js"></script>

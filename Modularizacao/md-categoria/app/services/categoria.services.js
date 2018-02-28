@@ -19,8 +19,19 @@
                 return (c.indexOf(filter) > -1);
             });
         };
+        
+        this.incluirCategoria = function(categoria){
+            _categorias.push(categoria);
+        };
 
+        this.editarCategoria = function(categoria){
 
+        };
+
+        this.removerCategoria = function(categoria){
+            var index = _categorias.indexOf(categoria);
+            _categorias.splice(index,1);
+        };
         
     }
 
