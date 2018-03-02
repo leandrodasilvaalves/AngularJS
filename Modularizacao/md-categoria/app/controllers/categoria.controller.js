@@ -5,18 +5,33 @@
         vm.categorias = [];
         vm.titulo="Incluir Categoria";
 
+///Metodos Privados
         var _init = function () {
             vm.listarCategorias();
+            console.log(vm);
         };
 
+        var _existeCategoria = function(categoria){
+            var existe = vm.categorias.indexOf(categoria);
+            if(existe > -1){
+                swal("Error!", "Já existe uma categoria com este nome!", "error");
+                return false;
+            }
+            return true;
+        }
+
+
+///Metodos Públicos
         vm.listarCategorias = function (filter) {            
             vm.categorias = categoriaServices.getCategorias();
         };
 
         vm.incluir = function (categoria) {
-            categoriaServices.incluirCategoria(categoria);
-            vm.listarCategorias();
-            vm.limparDados();
+            if(!_existeCategoria(categoria)){
+                categoriaServices.incluirCategoria(categoria);
+                vm.listarCategorias();
+                vm.limparDados();
+            }
         };
 
         vm.editar = function (categoria) {
@@ -58,7 +73,7 @@
             $('.modal').modal('hide');
         }
 
-        console.log(vm);
+        
         _init();
 
     }
