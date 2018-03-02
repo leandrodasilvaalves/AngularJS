@@ -3,25 +3,39 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" ng-bind="vm.titulo"></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="vm.limparDados()">
           <span aria-hidden="true">&times;</span>
         </button>
             </div>
             <div class="modal-body">
-                <form name="frmCategoria">
+                <form name="vm.frmCategoria">
                     <div class="form-group">
                         <label >Categoria</label>
-                        <input type="text" class="form-control" 
+                        <input type="text" id="categoria" class="form-control"name="categoria" 
                             placeholder="Informe o nome da categoria" 
-                            ng-model="categoria">
-                        
+                            ng-model="categoria"
+                            ng-required="true"
+                            ng-minlength="4" 
+                            autofocus>
+
+                            <small class="text-danger" ng-show="vm.frmCategoria.categoria.$invalid && vm.frmCategoria.categoria.$dirty">
+                                <span ng-show="vm.frmCategoria.$error.required">
+                                    Por favor, informe o nome da categoria.
+                                </span>
+                                <span ng-show="vm.frmCategoria.$error.minlength">
+                                    O nome da categoria deve ter pelo menos 4 caracteres.
+                                </span>
+                             </small>
+
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">
+                <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.limparDados()">
                     <i class="fa fa-close"></i> Cancelar</button>
-                <button class="btn btn-info" ng-click="vm.incluir(categoria)">
+                <button class="btn btn-info" 
+                        ng-click="vm.incluir(categoria)"
+                        ng-disabled="vm.frmCategoria.$invalid">
                      <i class="fa fa-check"></i> Salvar
                 </button>
             </div>

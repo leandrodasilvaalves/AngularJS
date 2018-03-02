@@ -3,6 +3,7 @@
     function categoriaController($scope, categoriaServices) {
         var vm = this;
         vm.categorias = [];
+        vm.titulo="Incluir Categoria";
 
         var _init = function () {
             vm.listarCategorias();
@@ -14,12 +15,12 @@
 
         vm.incluir = function (categoria) {
             categoriaServices.incluirCategoria(categoria);
-            delete $scope.categoria;
             vm.listarCategorias();
+            vm.limparDados();
         };
 
         vm.editar = function (categoria) {
-
+            vm.titulo = "Editar Categoria";
         };
 
         vm.remover = function (categoria) {
@@ -49,6 +50,15 @@
             return index + 1;
         };
 
+        vm.limparDados = function(){
+            vm.titulo="Incluir Categoria";
+            delete $scope.categoria;
+            vm.frmCategoria.$setPristine();
+            $('#categoria').val('');
+            $('.modal').modal('hide');
+        }
+
+        console.log(vm);
         _init();
 
     }
