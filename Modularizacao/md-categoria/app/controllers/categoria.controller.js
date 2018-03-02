@@ -10,7 +10,6 @@
 
         vm.listarCategorias = function (filter) {            
             vm.categorias = categoriaServices.getCategorias();
-            console.log(vm.categorias)
         };
 
         vm.incluir = function (categoria) {
@@ -24,6 +23,7 @@
         };
 
         vm.remover = function (categoria) {
+            
             swal({
                 title: "Deseja realmente excluir a categoria: (" + categoria + ") ?",
                 text: "ATENÇÃO! Esta operação é irreversível",
@@ -38,7 +38,9 @@
                     if (willDelete) {
                         categoriaServices.removerCategoria(categoria);                        
                         swal("Excluído!", "Categoria excluída com sucesso!", "success");
-                        vm.listarCategorias();
+                        $scope.$apply(function(){ 
+                            vm.listarCategorias();
+                        });
                     }
                 });
         };
