@@ -25,6 +25,12 @@ angular.module('appSelect2Custom').directive('select2Custom', function(){
                 scope.toogleClick();
                 scope.search='';
             };
+           
+        },
+        controller:function($scope,$sce){
+            $scope.render=function(obj){
+                return $sce.trustAsHtml(obj);
+            };
         }
         
     }

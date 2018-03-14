@@ -14,9 +14,12 @@
                         <input type="text" ng-model="search" autofocus>
                     </span>
     <ul class="select_listitens">
-        <li ng-repeat="ar in array | filter:search track by $index"
+        <!--li ng-repeat="ar in array | filter:search track by $index"
             ng-click="setSelected(ar)"
-            ng-bind="ar"></li>
+            ng-bind="ar"></li-->
+        <li ng-repeat="ar in array | filter:search track by $index"
+            ng-click="setSelected(ar)" ng-bind-html="render(ar)">
+        </li>
     </ul>
     </span>
 </div>
