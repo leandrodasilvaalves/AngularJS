@@ -1,4 +1,4 @@
-angular.module('appSelect2Custom',[]).directive('select2Custom', function(){
+angular.module('appSelect2Custom').directive('select2Custom', function(){
 
 
     return{
@@ -6,6 +6,7 @@ angular.module('appSelect2Custom',[]).directive('select2Custom', function(){
         replace:true,
         templateUrl:'app/directives/select2-custom/select2-custom.html',
         scope:{
+            array:'=list'
         },
         link:function(scope, element, attrs, ctrl){
             scope.clicked =false;
@@ -15,16 +16,6 @@ angular.module('appSelect2Custom',[]).directive('select2Custom', function(){
                 scope.clicked = !scope.clicked;
                 scope.arrowUp = !scope.arrowUp;
             };  
-            scope.array =['Goiás',
-                'Distrito Federal',
-                'São Paulo',
-                'Rio de Janeiro',
-                'Espírito Santo',
-                'Minas Gerais', 
-                'Mato Grosso do Sul',
-                'Bahia',
-                'Rio Grande do Norte'];
-            
         }
         
     }

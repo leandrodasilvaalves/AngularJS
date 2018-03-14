@@ -12,6 +12,7 @@
 
 
     <script src="app/app.js"></script>
+    <script src="app/controllers/main.controller.js"></script>
     <script src="app/directives/select2-custom/select2-custom.directive.js"></script>
     <link rel="stylesheet" href="app/directives/select2-custom/select2-custom.css">
 
@@ -19,12 +20,12 @@
 
 <body ng-app="appSelect2Custom">
 
-    <div class="container">
+    <div class="container" ng-controller="mainController">
 
         <h1>Select2- Custom Template</h1>        
 
         <div class="form-group col-8">
-            <select2-custom></select2-custom>
+            <select2-custom list="nomes"></select2-custom>
         </div>
 
 
