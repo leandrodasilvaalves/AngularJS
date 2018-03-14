@@ -57,4 +57,5 @@ angular.module('appSelect2Custom').controller('mainController',function($scope){
 
     _prepararTemplateIcones();
     _prepararTemplateCores();
+
 });

@@ -25,23 +25,24 @@
 
         <h1>Select2- Custom Template</h1>
 
-        <label>Nome: {{ nome }}</label>
+        
         <div class="form-group col-8">
+            <label>Nome: {{ nome }}</label>
             <select2-custom list="nomes" ng-model="nome" placeholder="Selecione um nome..."></select2-custom>
         </div>
-
-        <label>Estado: {{ estado }}</label>
+        
         <div class="form-group col-8">
+            <label>Estado: {{ estado }}</label>
             <select2-custom list="estados" ng-model="estado" placeholder="Selecione um estado..."></select2-custom>
         </div>
-
-        <label>Ícone: {{ icone }}</label>
+       
         <div class="form-group col-8">
+            <label>Ícone: {{ icone }}</label>
             <select2-custom list="icones" template="templateIcones" ng-model="icone" placeholder="Selecione um ícone..."></select2-custom>
         </div>
-
-        <label>Cor: {{ cor }} </label>
+        
         <div class="form-group col-8">
+            <label>Cor: {{ cor }} </label>
             <select2-custom list="cores" template="templateCores" ng-model="cor" placeholder="Selecione uma cor..."></select2-custom>
         </div>
 

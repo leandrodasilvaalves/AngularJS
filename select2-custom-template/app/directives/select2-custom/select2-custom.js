@@ -11,24 +11,23 @@ angular.module('appSelect2Custom').directive('select2Custom', function(){
             placeholder:'@',
             model:'=ngModel'
         },
-        link:function(scope, element, attrs, ctrl){
-        },
         controller:function($scope, $sce){
 
-            $scope.clicked =false;
-            $scope.arrowUp =false;
-            $scope.selected ='';
-            $scope.placeholder='Selecione...'
-            $scope.withTemplate=false;
+            $scope.isOpened = false;
+            $scope.arrowUp = false;
+            $scope.selected = '';
+            $scope.hasSelected=false;
+            $scope.placeholder = 'Selecione...'
+            $scope.withTemplate = false;
 
             $scope.toogleClick = function(){
-                $scope.clicked = !$scope.clicked;
+                $scope.isOpened = !$scope.isOpened;
                 $scope.arrowUp = !$scope.arrowUp;
             }; 
             
             $scope.setSelected = function (obj) {  
                 if($scope.withTemplate){
-                    $scope.model= _getModel(obj);
+                    $scope.model = _getModel(obj);
                     $scope.selected = $sce.trustAsHtml(obj); 
                 }
                 else{
@@ -37,7 +36,7 @@ angular.module('appSelect2Custom').directive('select2Custom', function(){
                 }
                 $scope.toogleClick();
                 $scope.search = '';
-                console.log($scope.model);
+                $scope.hasSelected = true;
             };
         
             $scope.render=function(obj){
@@ -46,13 +45,14 @@ angular.module('appSelect2Custom').directive('select2Custom', function(){
 
             var _getModel = function(obj){
                 var index = $scope.template.indexOf(obj);
-                console.log(index);
                 return $scope.array[index];
-            }
+            };
 
             var _init =function(){
                 $scope.withTemplate = $scope.template != undefined;
             };
+            
+
             _init();
         }
         

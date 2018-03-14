@@ -1,7 +1,7 @@
 <div class="select_custom" >
     <div ng-click="toogleClick()">
         <span class="select_rendered" ng-bind-html="selected"></span>
-        <span class="select_rendered select_placeholder" ng-bind="placeholder" ng-show="selected ===''"></span>
+        <span class="select_rendered select_placeholder" ng-bind="placeholder" ng-show="!hasSelected"></span>
     
         <span class="select_arrow">
             <i class="fa fa-angle-up" ng-show="arrowUp"></i>
@@ -9,7 +9,7 @@
         </span>
     </div>
     
-    <span class="select_dropdown" ng-show="clicked">
+    <span class="select_dropdown" ng-show="isOpened">
                     <span class="select_search">
                         <input type="text" ng-model="search" autofocus>
                     </span>
