@@ -1,0 +1,53 @@
+.select_custom{
+    display: block;
+    border:1px solid #aaaaaa;
+    border-radius: 5px;
+}
+.select_custom .select_rendered .select_dropdown{
+    width: 100% ;
+}
+.select_search{
+    margin-left: 8px;
+}
+.select_search input{
+    width :92.5%;
+    border-radius: 2px;
+    border:1px solid #aaaaaa;
+}
+.select_rendered {
+    display: block;
+    padding-left: 8px;
+    padding-right: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 28px;
+    border-bottom:1px solid #aaaaaa;
+    margin-bottom: 5px;
+}
+.select_listitens{
+    list-style: none;
+    width:100%;
+    padding-left:9px;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.select_listitens li{
+    display: list-item;
+    min-height: 35px;
+}
+
+.select_listitens li:hover{
+    background-color: #4d9df3;
+    color: #fff;
+    cursor: pointer;
+}
+
+.select_arrow {
+    height: 26px;
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    width: 20px;
+}
