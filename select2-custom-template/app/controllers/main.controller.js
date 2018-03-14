@@ -44,7 +44,8 @@ angular.module('appSelect2Custom').controller('mainController',function($scope){
                         width: 20px;
                         display: block;
                         background-color:`+ c.hex + `;
-                        border-radius: 20px;"></span>
+                        border-radius: 20px;
+                        margin-top: 5px;"></span>
                     </div>
                     <div class="col-9">
                         ` + c.description + `

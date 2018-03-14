@@ -23,27 +23,29 @@
 
     <div- class="container" ng-controller="mainController">
 
-        <h1>Select2- Custom Template</h1>        
+        <h1>Select2- Custom Template</h1>
 
+        <label>Nome: {{ nome }}</label>
         <div class="form-group col-8">
-            <select2-custom list="nomes" placeholder="Selecione um nome..."></select2-custom>
+            <select2-custom list="nomes" ng-model="nome" placeholder="Selecione um nome..."></select2-custom>
         </div>
 
+        <label>Estado: {{ estado }}</label>
         <div class="form-group col-8">
-            <select2-custom list="estados" placeholder="Selecione um estado..."></select2-custom>
+            <select2-custom list="estados" ng-model="estado" placeholder="Selecione um estado..."></select2-custom>
         </div>
 
+        <label>Ícone: {{ icone }}</label>
         <div class="form-group col-8">
-            <select2-custom list="templateIcones" display='description' placeholder="Selecione um ícone..."></select2-custom>
+            <select2-custom list="icones" template="templateIcones" ng-model="icone" placeholder="Selecione um ícone..."></select2-custom>
         </div>
 
+        <label>Cor: {{ cor }} </label>
         <div class="form-group col-8">
-            <select2-custom list="templateCores" display='description' placeholder="Selecione uma cor..."></select2-custom>
+            <select2-custom list="cores" template="templateCores" ng-model="cor" placeholder="Selecione uma cor..."></select2-custom>
         </div>
 
-        
-
-    </div>
+        </div>
 
 
 </body>
