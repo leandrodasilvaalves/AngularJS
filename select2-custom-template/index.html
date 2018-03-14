@@ -8,38 +8,21 @@
     <title>Select2- Template Custom</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <script src="node_modules/angular/angular.min.js"></script>
 
-    <script src="custom-template.js"></script>
-    <link rel="stylesheet" href="custom-template.css">
 
+    <script src="app/app.js"></script>
+    <script src="app/directives/select2-custom/select2-custom.directive.js"></script>
 </head>
 
-<body>
+<body ng-app="appSelect2Custom">
 
     <div class="container">
 
         <h1>Select2- Custom Template</h1>        
 
         <div class="form-group col-8">
-            <div class="select_custom">
-                <span class="select_rendered">Ojeto renderizado</span>
-                <span class="select_arrow"><i class="fa fa-angle-down"></i></span>
-                <span class="select_dropdown">
-                    <span class="select_search">
-                        <input type="text" autofocus>
-                    </span>
-                    <ul class="select_listitens">
-                        <li>Goiás</li>
-                        <li>Distrito Federal</li>
-                        <li>São Paulo</li>
-                        <li>Rio de Janeiro</li>
-                        <li>Espírito  Santo</li>
-                        <li>Minas Gerais</li>
-                        <li>Mato Grosso do Sul</li>
-                        <li>Bahia</li>
-                    </ul>
-                </span>
-            </div>
+            <select2-custom></select2-custom>
         </div>
 
 

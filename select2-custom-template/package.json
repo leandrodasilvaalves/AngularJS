@@ -2,13 +2,14 @@
   "name": "select2-custom-template",
   "version": "1.0.0",
   "description": "",
-  "main": "custom-template.js",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Leandro da Silva Alves",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.6.9",
     "bootstrap": "^4.0.0",
     "font-awesome": "^4.7.0",
     "popper.js": "^1.12.9",
