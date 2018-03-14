@@ -1,0 +1,69 @@
+.select_custom{
+    display: block;
+    border:1px solid #aaaaaa;
+    border-radius: 5px;
+    width: 100% ;
+    min-height: 32px;
+}
+
+.select_rendered {
+    display: block;
+    padding-left: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 28px;
+    margin-bottom: 2.5px;    
+}
+
+.select_arrow {
+    color:#aaaaaa;
+    height: 26px;
+    position: absolute;
+    top: 2px;
+    right: 15px;
+    width: 20px;
+}
+
+.select_dropdown{
+    width: 100%;
+    min-height: 50px;
+    border-top: 1px solid #aaaaaa;
+    display: block;
+}
+
+.select_search{
+    margin-left: 8px;
+}
+
+.select_search input{
+    width :92.5%;
+    border-radius: 2px;
+    border:1px solid #aaaaaa;
+    padding-left: 7.5%;
+    margin-top:5px;
+}
+
+.select_listitens{
+    margin-top: 8px;
+    margin-bottom: 2.5px;
+    list-style: none;
+    width:100%;
+    padding-left:0;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.select_listitens li{
+    display: list-item;
+    min-height: 35px;
+    padding-left:9px;
+}
+
+.select_listitens li:hover{
+    background-color: #4d9df3;
+    color: #fff;
+    cursor: pointer;
+}
+
+
