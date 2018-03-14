@@ -10,24 +10,26 @@ angular.module('appSelect2Custom').directive('select2Custom', function(){
             placeholder:'@'
         },
         link:function(scope, element, attrs, ctrl){
-            scope.clicked =false;
-            scope.arrowUp =false;
-            scope.selected ='';
-            scope.placeholder='Selecione...'
 
-            scope.toogleClick = function(){
-                scope.clicked = !scope.clicked;
-                scope.arrowUp = !scope.arrowUp;
+        },
+        controller:function($scope, $sce){
+
+            $scope.clicked =false;
+            $scope.arrowUp =false;
+            $scope.selected ='';
+            $scope.placeholder='Selecione...'
+
+            $scope.toogleClick = function(){
+                $scope.clicked = !$scope.clicked;
+                $scope.arrowUp = !$scope.arrowUp;
             }; 
             
-            scope.setSelected= function(obj){
-                scope.selected = obj;
-                scope.toogleClick();
-                scope.search='';
-            };
-           
-        },
-        controller:function($scope,$sce){
+            $scope.setSelected = function (obj) {                
+                $scope.selected = $sce.trustAsHtml(obj);
+                $scope.toogleClick();
+                $scope.search = '';
+                };
+        
             $scope.render=function(obj){
                 return $sce.trustAsHtml(obj);
             };
