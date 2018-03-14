@@ -15,7 +15,15 @@ angular.module('appSelect2Custom',[]).directive('select2Custom', function(){
                 scope.clicked = !scope.clicked;
                 scope.arrowUp = !scope.arrowUp;
             };  
-
+            scope.array =['Goiás',
+                'Distrito Federal',
+                'São Paulo',
+                'Rio de Janeiro',
+                'Espírito Santo',
+                'Minas Gerais', 
+                'Mato Grosso do Sul',
+                'Bahia',
+                'Rio Grande do Norte'];
             
         }
         

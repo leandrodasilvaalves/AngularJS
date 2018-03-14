@@ -6,17 +6,10 @@
     </span>
     <span class="select_dropdown" ng-show="clicked">
                     <span class="select_search">
-                        <input type="text" autofocus>
+                        <input type="text" ng-model="search" autofocus>
                     </span>
     <ul class="select_listitens">
-        <li>Goiás</li>
-        <li>Distrito Federal</li>
-        <li>São Paulo</li>
-        <li>Rio de Janeiro</li>
-        <li>Espírito Santo</li>
-        <li>Minas Gerais</li>
-        <li>Mato Grosso do Sul</li>
-        <li>Bahia</li>
+        <li ng-repeat="ar in array | filter:search track by $index" ng-bind="ar"></li>
     </ul>
     </span>
 </div>
