@@ -1,5 +1,66 @@
 .select_custom{
     display: block;
+    border:0.05em solid #aaaaaa;
+    border-radius: 0.25em;
+    width: 100% ;
+    min-height: 1.9em;
+}
+
+.select_rendered {
+    display: block;
+    padding-left: 0.6em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.6em;
+    margin-bottom: 0.25em;  
+    cursor: pointer;  
+}
+
+.select_placeholder{
+    color:#aaaaaa;
+}
+
+.select_arrow {
+    color:#aaaaaa;
+    height: 1.6em;
+    position: absolute;
+    right: 1em;
+    width: 1.1em;
+}
+
+.select_arrow_up{
+    bottom: 0.2em;
+}
+.select_arrow_down{
+    top:2.2em;
+}
+
+.select_dropdown{
+    border:0.05em solid #aaaaaa;   
+    border-bottom-right-radius:  0.25em;
+    border-bottom-left-radius:  0.25em; 
+    background-color:#fff;
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    width: calc(100% - 1.8em);
+}
+
+.select_search{
+    margin-left: 0.3em;
+}
+
+.select_search input{
+    width :calc(100% - 0.6em);
+    border-radius: 0.2em;
+    border:0.05em solid #aaaaaa;
+    padding-left: 7.5px;
+    margin-top:5px;
+}
+
+/*.select_custom{
+    display: block;
     border:1px solid #aaaaaa;
     border-radius: 5px;
     width: 100% ;
@@ -38,8 +99,13 @@
 .select_dropdown{
     width: 100%;
     min-height: 50px;
-    border-top: 1px solid #aaaaaa;
+    border: 1px solid #aaaaaa;   
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px; 
+    background-color:#fff;
     display: block;
+    position: absolute;
+    z-index: 9999;
 }
 
 .select_search{
@@ -76,5 +142,5 @@
     color: #fff;
     cursor: pointer;
 }
-
+*/
 
