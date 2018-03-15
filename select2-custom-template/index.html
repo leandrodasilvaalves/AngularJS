@@ -21,32 +21,33 @@
 
 <body ng-app="appSelect2Custom">
 
-    <div- class="container" ng-controller="mainController">
+    <div class="container" ng-controller="mainController">
 
         <h1>Select2- Custom Template</h1>
 
-        
-        <div class="form-group col-8">
-            <label>Nome: {{ nome }}</label>
-            <select2-custom list="nomes" ng-model="nome" placeholder="Selecione um nome..."></select2-custom>
-        </div>
-        
-        <div class="form-group col-8">
-            <label>Estado: {{ estado }}</label>
-            <select2-custom list="estados" ng-model="estado" placeholder="Selecione um estado..."></select2-custom>
-        </div>
-       
-        <div class="form-group col-8">
-            <label>Ícone: {{ icone }}</label>
-            <select2-custom list="icones" template="templateIcones" ng-model="icone" placeholder="Selecione um ícone..."></select2-custom>
-        </div>
-        
-        <div class="form-group col-8">
-            <label>Cor: {{ cor }} </label>
-            <select2-custom list="cores" template="templateCores" ng-model="cor" placeholder="Selecione uma cor..."></select2-custom>
-        </div>
+        <div class="row">
+            <div class="form-group col-lg-6 col-md-12">
+                <label>Nome: {{ nome }}</label>
+                <select2-custom list="nomes" ng-model="nome" placeholder="Selecione um nome..."></select2-custom>
+            </div>
+
+            <div class="form-group col-lg-6 col-md-12">
+                <label>Estado: {{ estado }}</label>
+                <select2-custom list="estados" ng-model="estado" placeholder="Selecione um estado..."></select2-custom>
+            </div>
+
+            <div class="form-group col-lg-6 col-md-12">
+                <label>Ícone: {{ icone }}</label>
+                <select2-custom list="icones" template="templateIcones" ng-model="icone" placeholder="Selecione um ícone..."></select2-custom>
+            </div>
+
+            <div class="form-group col-lg-6 col-md-12">
+                <label>Cor: {{ cor }} </label>
+                <select2-custom list="cores" template="templateCores" ng-model="cor" placeholder="Selecione uma cor..."></select2-custom>
+            </div>
 
         </div>
+    </div>
 
 
 </body>

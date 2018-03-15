@@ -3,7 +3,7 @@
         <span class="select_rendered" ng-bind-html="selected"></span>
         <span class="select_rendered select_placeholder" ng-bind="placeholder" ng-show="!hasSelected"></span>
     
-        <span class="select_arrow">
+        <span class="select_arrow" ng-class="isOpened ? 'select_arrow_down' : 'select_arrow_up'">
             <i class="fa fa-angle-up" ng-show="arrowUp"></i>
             <i class="fa fa-angle-down" ng-show="!arrowUp"></i>
         </span>

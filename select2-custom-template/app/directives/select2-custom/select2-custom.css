@@ -24,9 +24,15 @@
     color:#aaaaaa;
     height: 26px;
     position: absolute;
-    bottom: 2px;
     right: 15px;
     width: 20px;
+}
+
+.select_arrow_up{
+    bottom: 2px;
+}
+.select_arrow_down{
+    top:33px;
 }
 
 .select_dropdown{
