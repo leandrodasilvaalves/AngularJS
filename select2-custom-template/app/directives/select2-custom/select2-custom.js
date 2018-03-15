@@ -19,6 +19,7 @@ angular.module('appSelect2Custom').directive('select2Custom', function(){
             $scope.hasSelected=false;
             $scope.placeholder = 'Selecione...'
             $scope.withTemplate = false;
+            $scope.showClean = false
 
             $scope.toogleClick = function(){
                 $scope.isOpened = !$scope.isOpened;
@@ -35,13 +36,27 @@ angular.module('appSelect2Custom').directive('select2Custom', function(){
                     $scope.model = obj;
                 }
                 $scope.toogleClick();
-                $scope.search = '';
+                $scope.cleanSearch();
                 $scope.hasSelected = true;
             };
         
             $scope.render=function(obj){
                 return $sce.trustAsHtml(obj);                
             };
+
+            $scope.cleanSearch=function(){
+                $scope.search = '';
+            }
+
+            $scope.$watch(function(){
+                if($scope.search == '' 
+                    || $scope.search == null 
+                    || $scope.search == undefined)
+                    
+                    $scope.showClean = false;
+                else
+                    $scope.showClean = true
+            });
 
             var _getModel = function(obj){
                 var index = $scope.template.indexOf(obj);
@@ -51,7 +66,6 @@ angular.module('appSelect2Custom').directive('select2Custom', function(){
             var _init =function(){
                 $scope.withTemplate = $scope.template != undefined;
             };
-            
 
             _init();
         }

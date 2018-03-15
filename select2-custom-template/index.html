@@ -15,7 +15,6 @@
     <script src="app/app.js"></script>
     <script src="app/controllers/main.controller.js"></script>
     <script src="app/directives/select2-custom/select2-custom.js"></script>
-    <link rel="stylesheet" href="app/directives/select2-custom/select2-custom.css">
 
 </head>
 
@@ -25,7 +24,9 @@
 
         <h1>Select2- Custom Template</h1>
 
-        <div class="row">
+        <h2>Array Simples</h2>
+        <p>Exemplo:  ['a', 'b', 'c'];</p>
+        <div class="row">            
             <div class="form-group col-lg-6 col-md-12">
                 <label>Nome: {{ nome }}</label>
                 <select2-custom list="nomes" ng-model="nome" placeholder="Selecione um nome..."></select2-custom>
@@ -35,7 +36,11 @@
                 <label>Estado: {{ estado }}</label>
                 <select2-custom list="estados" ng-model="estado" placeholder="Selecione um estado..."></select2-custom>
             </div>
+        </div>
 
+        <h2>Objeto Json com template customizado</h2>
+        <p>Exemplo:  [{icon:'fa fa-address-book', description:'Descrição do ícone'}, {...}];</p>
+        <div class="row">            
             <div class="form-group col-lg-6 col-md-12">
                 <label>Ícone: {{ icone }}</label>
                 <select2-custom list="icones" template="templateIcones" ng-model="icone" placeholder="Selecione um ícone..."></select2-custom>
