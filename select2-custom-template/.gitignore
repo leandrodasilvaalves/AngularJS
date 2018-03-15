@@ -1,1 +1,4 @@
 /node_modules
+/dist/select2-custom-all.js
+/dist/select2-custom.html
+/dist/select2-custom.min.css

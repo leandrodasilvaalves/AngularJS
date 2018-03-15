@@ -10,15 +10,15 @@ module.exports = function (grunt) {
         concat:{
             scripts: {                
                 src: ['app/*.js','app/directives/**/*.js'],
-                dest: 'dist/script.js'
+                dest: 'dist/select2-custom-all.js'
             }
         },
         uglify:{
             scripts:{
-                src:['dist/script.js'],
+                src:['dist/select2-custom-all.js'],
                 dest:'dist/select2-custom.min.js'
             }
-        },
+        },        
         cssmin:{
             all: {
                 src: ['app/directives/**/*.css'],
@@ -44,6 +44,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
     grunt.registerTask('dist-etp1',['jshint', 'concat:scripts', 'htmlmin','cssmin']);
-    grunt.registerTask('dist-etp2',['jshint','uglify:scripts']);
+    grunt.registerTask('dist-etp2',['uglify:scripts']);
 
 }
