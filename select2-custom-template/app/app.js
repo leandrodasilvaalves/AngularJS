@@ -1,1 +1,1 @@
-angular.module('appSelect2Custom',['ngSanitize']);
+angular.module('select2Custom',['ngSanitize']);

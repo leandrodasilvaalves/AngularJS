@@ -1,4 +1,4 @@
-angular.module('appSelect2Custom').directive('select2Custom', function(){
+angular.module('select2Custom').directive('select2Custom', function(){
 
     return{
         retrict:'E',
@@ -14,16 +14,14 @@ angular.module('appSelect2Custom').directive('select2Custom', function(){
         controller:function($scope, $sce){
 
             $scope.isOpened = false;
-            $scope.arrowUp = false;
             $scope.selected = '';
             $scope.hasSelected=false;
-            $scope.placeholder = 'Selecione...'
+            $scope.placeholder = 'Selecione...';
             $scope.withTemplate = false;
-            $scope.showClean = false
+            $scope.showClean = false;
 
             $scope.toogleClick = function(){
                 $scope.isOpened = !$scope.isOpened;
-                $scope.arrowUp = !$scope.arrowUp;
             }; 
             
             $scope.setSelected = function (obj) {  
@@ -46,16 +44,13 @@ angular.module('appSelect2Custom').directive('select2Custom', function(){
 
             $scope.cleanSearch=function(){
                 $scope.search = '';
-            }
+            };
 
             $scope.$watch(function(){
-                if($scope.search == '' 
-                    || $scope.search == null 
-                    || $scope.search == undefined)
-                    
+                if($scope.search == '' || $scope.search == null || $scope.search == undefined)
                     $scope.showClean = false;
                 else
-                    $scope.showClean = true
+                    $scope.showClean = true;
             });
 
             var _getModel = function(obj){
@@ -70,5 +65,5 @@ angular.module('appSelect2Custom').directive('select2Custom', function(){
             _init();
         }
         
-    }
+    };
 });

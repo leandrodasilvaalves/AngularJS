@@ -1,0 +1,93 @@
+.select_custom {
+    display: block;
+    border: 0.05em solid #aaaaaa;
+    border-radius: 0.25em;
+    width: 100%;
+    min-height: 1.9em;
+}
+
+.select_rendered {
+    display: block;
+    padding-left: 0.6em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.6em;
+    margin-bottom: 0.25em;
+    cursor: pointer;
+}
+
+.select_placeholder {
+    color: #aaaaaa;
+}
+
+.select_arrow {
+    color: #aaaaaa;
+    height: 1.6em;
+    position: absolute;
+    right: 1em;
+    width: 1.1em;
+}
+
+.select_arrow_down {
+    bottom: 0.2em;
+}
+
+.select_arrow_up {
+    top: 2.2em;
+}
+
+.select_dropdown {
+    border: 0.05em solid #aaaaaa;
+    border-bottom-right-radius: 0.25em;
+    border-bottom-left-radius: 0.25em;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    width: calc(100% - 1.8em);
+    box-shadow: 0.04em 0.04em 0.17em 0.05px #bdbcbc;
+}
+
+.select_search {
+    margin-left: 0.3em;
+}
+
+.select_search input {
+    width: calc(100% - 0.6em);
+    border-radius: 0.2em;
+    border: 0.05em solid #aaaaaa;
+    padding-left: 0.3em;
+    margin-top: 0.25em;
+}
+
+.select_search i{
+    color: #999696;
+    cursor: pointer;
+    position:absolute;
+    right: 0.8em;
+    top: 0.55em;
+}
+
+.select_listitens {
+    margin-top: 0.35em;
+    margin-bottom: 0.25em;
+    list-style: none;
+    width: 100%;
+    padding-left: 0;
+    max-height: 8em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.select_listitens li {
+    display: list-item;
+    min-height: 2em;
+    padding-left: 0.5em;
+}
+
+.select_listitens li:hover {
+    background-color: #4d9df3;
+    color: #fff;
+    cursor: pointer;
+}
