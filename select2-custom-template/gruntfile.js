@@ -44,6 +44,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
     grunt.registerTask('dist-etp1',['jshint', 'concat:scripts', 'htmlmin','cssmin']);
+    //copiar e colar o template e o css manualmente em "select2-custom-all.js" 
+    //e depis executar as task 'dist-etp2'
     grunt.registerTask('dist-etp2',['uglify:scripts']);
 
 }
